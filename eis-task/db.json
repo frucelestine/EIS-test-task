@@ -1,0 +1,25 @@
+{
+    "product": [
+        {
+            "id": 1,
+            "name": "butter oil",
+            "image": "image",
+            "price": 20,
+            "quantity": 10
+        },
+        {
+            "id": 2,
+            "name": "bags",
+            "image": "bag-image",
+            "price": 50,
+            "quantity": 5
+        },
+        {
+            "id": 3,
+            "name": "fan",
+            "image": "fan-image",
+            "price": 100,
+            "quantity": 2
+        }
+    ]
+}
