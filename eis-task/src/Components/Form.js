@@ -114,7 +114,7 @@ class Form extends React.Component {
     const drop = {
         background: 'rgb(226, 224, 224)',
         textAlign: 'left',
-        width: '69%',
+        width: '75%',
         padding: '9px 15px'
     }
 
