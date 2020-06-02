@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Button } from "@material-ui/core";
 import result from "../result";
 import { Paper } from "@material-ui/core";
+import Dropzone from "react-dropzone";
 
 class Form extends React.Component {
   constructor() {
@@ -30,6 +31,14 @@ class Form extends React.Component {
       this.setState({ display: "block" });
       this.setState({ image: e.target.files[0] });
       this.setState({ prev: URL.createObjectURL(e.target.files[0]) });
+    }
+  };
+
+  handleDrop = (acceptedFiles) => {
+    if (acceptedFiles) {
+      this.setState({ display: "block" });
+      this.setState({ image: acceptedFiles });
+      this.setState({ prev: URL.createObjectURL(acceptedFiles[0]) });
     }
   };
 
@@ -84,8 +93,8 @@ class Form extends React.Component {
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-      width: '90%',
-      margin: '0 auto 15px'
+      width: "90%",
+      margin: "0 auto 15px",
     };
 
     const formPrev = {
@@ -104,22 +113,28 @@ class Form extends React.Component {
 
     const formBtn = {
       border: "1px solid black",
-      cursor: 'pointer'
+      cursor: "pointer",
     };
 
     const formInput = {
-        marginBottom: 10,
+      marginBottom: 10,
     };
 
     const drop = {
-        background: 'rgb(226, 224, 224)',
-        textAlign: 'left',
-        width: '75%',
-        padding: '9px 15px'
-    }
+      background: "rgb(226, 224, 224)",
+      textAlign: "left",
+      width: "75%",
+      padding: "12px 15px",
+    };
 
     return (
       <div>
+        <input
+          id="hiddenFileInput"
+          style={{ display: "none" }}
+          type="file"
+          onChange={this.handleImage}
+        />
         <input
           id="hiddenFileInput"
           style={{ display: "none" }}
@@ -133,7 +148,22 @@ class Form extends React.Component {
           >
             Add product
           </Button>
-          <div style={drop}>or drop your product here!</div>
+          <Dropzone
+            noClick={true}
+            onDrop={(acceptedFiles) => {
+              this.handleDrop(acceptedFiles);
+            }}
+          >
+            {({ getRootProps, getInputProps }) => (
+              <section style={drop}>
+                <div {...getRootProps()}>
+                  <input {...getInputProps()} />
+                  or drop your product here!
+                </div>
+              </section>
+            )}
+          </Dropzone>
+          {/* <div style={drop}>or drop your product here!</div> */}
         </div>
         <div style={{ marginBottom: 15, height: 1, background: "black" }}></div>
         <form onSubmit={this.handleUpload} style={root}>
