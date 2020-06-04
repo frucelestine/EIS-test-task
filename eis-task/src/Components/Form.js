@@ -165,7 +165,7 @@ class Form extends React.Component {
           </Dropzone>
           {/* <div style={drop}>or drop your product here!</div> */}
         </div>
-        <div style={{ marginBottom: 15, height: 1, background: "black" }}></div>
+        <div style={{ margin: '0 auto 15px', height: 1, background: "black", width: '95%' }}></div>
         <form style={root}>
           <h5 style={formHead}>Product detail</h5>
           <img src={this.state.prev} style={formPrev} alt="item preview" />
