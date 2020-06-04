@@ -166,7 +166,7 @@ class Form extends React.Component {
           {/* <div style={drop}>or drop your product here!</div> */}
         </div>
         <div style={{ marginBottom: 15, height: 1, background: "black" }}></div>
-        <form onSubmit={this.handleUpload} style={root}>
+        <form style={root}>
           <h5 style={formHead}>Product detail</h5>
           <img src={this.state.prev} style={formPrev} alt="item preview" />
           <br />
@@ -208,7 +208,7 @@ class Form extends React.Component {
             name="product color"
           />
           <div style={formBtnContainer}>
-            <button type="submit" style={formBtn}>
+            <button onClick={this.handleUpload} type="submit" style={formBtn}>
               Save
             </button>
             <button style={formBtn} onClick={this.handleClose}>
