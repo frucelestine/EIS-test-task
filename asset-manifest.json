@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/EIS-test-task/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/EIS-test-task/static/js/main.379117ee.chunk.js",
-    "main.js.map": "/EIS-test-task/static/js/main.379117ee.chunk.js.map",
+    "main.js": "/EIS-test-task/static/js/main.2d9f45ab.chunk.js",
+    "main.js.map": "/EIS-test-task/static/js/main.2d9f45ab.chunk.js.map",
     "runtime-main.js": "/EIS-test-task/static/js/runtime-main.73001334.js",
     "runtime-main.js.map": "/EIS-test-task/static/js/runtime-main.73001334.js.map",
     "static/js/2.4d57ed9b.chunk.js": "/EIS-test-task/static/js/2.4d57ed9b.chunk.js",
     "static/js/2.4d57ed9b.chunk.js.map": "/EIS-test-task/static/js/2.4d57ed9b.chunk.js.map",
     "index.html": "/EIS-test-task/index.html",
-    "precache-manifest.40dee394f7f24cf99b3d1cebbfc4b493.js": "/EIS-test-task/precache-manifest.40dee394f7f24cf99b3d1cebbfc4b493.js",
+    "precache-manifest.967c6ccfad2c54b61fa82924fde95db0.js": "/EIS-test-task/precache-manifest.967c6ccfad2c54b61fa82924fde95db0.js",
     "service-worker.js": "/EIS-test-task/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/EIS-test-task/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.4d57ed9b.chunk.js.LICENSE.txt": "/EIS-test-task/static/js/2.4d57ed9b.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.73001334.js",
     "static/js/2.4d57ed9b.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.379117ee.chunk.js"
+    "static/js/main.2d9f45ab.chunk.js"
   ]
 }
