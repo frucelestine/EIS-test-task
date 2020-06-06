@@ -4,16 +4,19 @@ import Form from "./Components/Form";
 import { makeStyles } from "@material-ui/core/styles";
 import GetProduct from "./Components/GetProduct";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   root: {
     display: "flex",
     flexWrap: "wrap",
     "& > *": {
-      margin: theme.spacing(1),
-      width: "60%",
+      // margin: theme.spacing(1),
+      width: "70%",
       margin: "0 auto",
       minHeight: 400,
       padding: "0 0 20px",
+      "@media (max-width: 800px)": {
+        width: "100%"
+      },
     },
   },
   pageHead: {
@@ -23,12 +26,11 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
   },
   search: {
-    
     focus: {
       outline: "none",
     },
   },
-}));
+});
 
 const App = (props) => {
   const classes = useStyles();

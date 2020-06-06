@@ -74,6 +74,7 @@ class Form extends React.Component {
     const id = open ? "simple-popover" : undefined;
     const root = {
       display: this.state.display,
+      zIndex: 99,
       position: "fixed",
       border: "1px solid black",
       borderRadius: 5,
@@ -82,6 +83,7 @@ class Form extends React.Component {
       right: 30,
       top: 10,
     };
+
     const formHead = {
       background: "rgb(66, 66, 66)",
       color: "white",

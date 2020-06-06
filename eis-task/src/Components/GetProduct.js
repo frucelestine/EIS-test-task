@@ -49,7 +49,10 @@ class GetProduct extends Component {
       borderRadius: 10,
       marginBottom: 30,
       top: -130,
-      left: 24,
+      left: 19,
+      "@media (max-width: 800px)" : {
+          left: "13px"
+      },
     };
 
     const filteredItems = this.state.items.filter((item) => {
