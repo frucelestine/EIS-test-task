@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import result from "../result";
 import ShowProducts from "./ShowProducts";
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 
 class GetProduct extends Component {
   constructor(props) {
     super(props);
     this.onDelete = this.onDelete.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
     this.state = {
       items: [],
       search: "",
@@ -63,7 +64,7 @@ class GetProduct extends Component {
       <div style={{position: 'relative'}}>
         <input
           type="search"
-          onChange={this.handleSearch.bind(this)}
+          onChange={this.handleSearch}
           value={this.state.search}
           placeholder="search product"
           style={searchForm}

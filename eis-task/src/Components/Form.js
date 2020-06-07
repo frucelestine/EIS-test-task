@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import { Button } from "@material-ui/core";
 import result from "../result";
-import { Paper } from "@material-ui/core";
+// import { Paper } from "@material-ui/core";
 import Dropzone from "react-dropzone";
 
 class Form extends React.Component {
   constructor() {
     super();
     this.handleImage = this.handleImage.bind(this);
-    this.handleForm = this.handleForm.bind(this);
+    // this.handleForm = this.handleForm.bind(this);
   }
 
   state = {
@@ -42,11 +42,12 @@ class Form extends React.Component {
     }
   };
 
-  handleForm = (e) => {
-    this.setState({ anchorEl: e.currentTarget });
-  };
+//   handleForm = (e) => {
+//     this.setState({ anchorEl: e.currentTarget });
+//   };
 
-  handleClose = () => {
+  handleClose = (e) => {
+      e.preventDefault();
     this.setState({ display: "none" });
   };
 
@@ -137,12 +138,12 @@ class Form extends React.Component {
           type="file"
           onChange={this.handleImage}
         />
-        <input
+        {/* <input
           id="hiddenFileInput"
           style={{ display: "none" }}
           type="file"
           onChange={this.handleImage}
-        />
+        /> */}
         <div style={uploadGroup}>
           <Button
             onClick={this.handleClick}
